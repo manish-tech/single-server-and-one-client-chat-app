@@ -70,7 +70,7 @@ void readFromSocket(char *output,int sockfd){
     ssize_t n = -1;
     bzero(output,256);
     while(n = read(sockfd,(char*)output,256) > 0){
-        printf("client-> %s",output);
+        printf("server-> %s",output);
         bzero(output,256);
     }
     if(n == -1){
